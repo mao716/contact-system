@@ -65,6 +65,7 @@
 		}
 
 		.link {
+			font-size: 14px;
 			color: #6c645c;
 			text-decoration: underline;
 		}
