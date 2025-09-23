@@ -1,0 +1,124 @@
+/* 検索バー */
+.admin-search {
+	max-width: 980px;
+	margin: 18px auto 8px;
+}
+
+.search-row {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.input,
+.select {
+	box-sizing: border-box;
+	padding: 9px 12px;
+	background: #f7f5f3;
+	border: 1px solid #e6e0da;
+	border-radius: 2px;
+	color: #6c645c;
+}
+
+.input {
+	min-width: 280px;
+}
+
+.select {
+	min-width: 160px;
+}
+
+.actions-left {
+	max-width: 980px;
+	margin: 12px auto;
+}
+
+/* テーブル */
+.admin-table {
+	width: 980px;
+	margin: 16px auto 12px;
+	border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+	border-bottom: 1px solid #e6e0da;
+	padding: 16px 20px;
+	color: #6c645c;
+}
+
+.admin-table thead th {
+	background: #bca999;
+	color: #fff;
+	text-align: left;
+}
+
+.admin-table .w-ctl {
+	width: 110px;
+}
+
+.admin-table .ctl {
+	text-align: right;
+}
+
+.admin-table .empty {
+	text-align: center;
+	padding: 28px 0;
+	color: #9a9188;
+}
+
+/* ボタン */
+.btn {
+	display: inline-block;
+	padding: 8px 20px;
+	font-size: 14px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: pointer;
+	border: 0;
+}
+
+.btn.primary {
+	background: #8e7b6d;
+	color: #fff;
+}
+
+.btn.ghost {
+	background: #f5f1ee;
+	color: #a09386;
+	border: 1px solid #cfc5bb;
+}
+
+.btn.sm {
+	padding: 6px 14px;
+	font-size: 13px;
+}
+
+/* ページネーション */
+.pager {
+	width: 980px;
+	margin: 12px auto 28px;
+	text-align: center;
+}
+
+.pager nav {
+	display: inline-block;
+}
+
+/* スマホ簡易 */
+@media (max-width: 768px) {
+
+	.admin-table,
+	.admin-search,
+	.actions-left,
+	.pager {
+		width: auto;
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+
+	.input {
+		min-width: 180px;
+	}
+}
