@@ -1,0 +1,53 @@
+.form-row {
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	gap: 100px;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.form-label {
+	text-align: left;
+	color: #6c645c;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 2px;
+	background: #f7f7f7;
+}
+
+.inline {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.name-inline {
+	gap: 40px;
+}
+
+.form-field.inline label {
+	margin-right: 30px;
+}
+
+.inline>input,
+.inline>select,
+.inline>textarea {
+	flex: 1 1 0;
+}
+
+.separator {
+	flex: 0 0 auto;
+	display: inline-block;
+}
+
+.tel-split input {
+	width: 100%;
+}

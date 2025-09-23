@@ -1,0 +1,64 @@
+/* レイアウト共通 */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 30px 20px;
+}
+
+h1 {
+	color: #6c645c;
+	font-family: "Hiragino Mincho ProN", "游明朝", serif;
+	text-align: center;
+	font-weight: 600;
+	margin: 40px 0px;
+}
+
+h2 {
+	color: #6c645c;
+	font-family: "Hiragino Mincho ProN", "游明朝", serif;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* 区切り線 */
+hr {
+	border: 0;
+	border-top: 1px solid #eee;
+	margin-top: 18px;
+}
+
+/* 必須マーク */
+.req {
+	color: red;
+	margin-left: 6px;
+}
+
+/* ボタン共通 */
+.btn {
+	padding: 8px 35px;
+	border: 0;
+	border-radius: 2px;
+	background: #8e7b6d;
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
+
+/* アクション行（送信ボタンや修正リンクの並び） */
+.actions,
+.submit-area {
+	text-align: center;
+	margin-top: 28px;
+	display: flex;
+	gap: 28px;
+	justify-content: center;
+}
+
+/* 修正リンクとか */
+.link {
+	font-size: 15px;
+	color: #6c645c;
+	text-decoration: underline;
+}
