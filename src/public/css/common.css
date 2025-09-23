@@ -1,5 +1,6 @@
 /* レイアウト共通 */
 header {
+	position: relative;
 	background: #fff;
 	padding: 20px;
 }
@@ -10,7 +11,8 @@ header {
 	top: 45px;
 }
 
-.header-btn a {
+.header-btn a,
+.header-btn button {
 	display: inline-block;
 	padding: 6px 14px;
 	font-size: 14px;
@@ -19,7 +21,6 @@ header {
 	border-radius: 4px;
 	background-color: #f5f1ee;
 	text-decoration: none;
-	transition: all 0.2s ease;
 	cursor: pointer;
 }
 
