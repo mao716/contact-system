@@ -8,7 +8,7 @@ header {
 .header-btn {
 	position: absolute;
 	right: 80px;
-	top: 45px;
+	top: 60px;
 }
 
 .header-btn a,
@@ -33,6 +33,7 @@ header {
 h1 {
 	color: #6c645c;
 	font-family: "Hiragino Mincho ProN", "游明朝", serif;
+	font-size: 40px;
 	text-align: center;
 	font-weight: 600;
 }
@@ -40,6 +41,7 @@ h1 {
 h2 {
 	color: #6c645c;
 	font-family: "Hiragino Mincho ProN", "游明朝", serif;
+	font-size: 30px;
 	text-align: center;
 	margin: 0;
 	padding: 35px 0 0 0;
@@ -54,8 +56,15 @@ hr {
 
 /* 必須マーク */
 .req {
-	color: red;
+	color: #d9534f;
 	margin-left: 6px;
+}
+
+/* エラー表示 */
+.error {
+	margin-top: 6px;
+	font-size: 12px;
+	color: #d9534f;
 }
 
 /* ボタン共通 */

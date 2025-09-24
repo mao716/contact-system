@@ -28,3 +28,9 @@ php artisan config:clear
 php artisan cache:clear
 touch public/css/admin.css
 exit
+php artisan vendor:publish --tag=laravel-pagination
+touch resources/views/vendor/pagination/custom.blade.php
+mkdir app/Http/Responses
+touch app/Http/Responses/LogoutResponse.php
+php artisan optimize:clear
+exit

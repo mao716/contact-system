@@ -54,7 +54,7 @@ class ContactController extends Controller
 			'first_name'  => $input['first_name'],
 			'gender'      => $input['gender'],
 			'email'       => $input['email'],
-			'tel'         => $input['tel'],          // confirmで整形済み
+			'tel'         => $input['tel'], // confirmで整形済み
 			'address'     => $input['address'],
 			'building'    => $input['building'] ?? null,
 			'detail'      => $input['detail'],

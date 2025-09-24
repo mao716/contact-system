@@ -1,3 +1,8 @@
+/* テーブル下にだけ余白 */
+.main {
+	padding-bottom: 60px;
+}
+
 /* 検索バー */
 .admin-search {
 	max-width: 980px;
@@ -22,50 +27,28 @@
 }
 
 .input {
-	min-width: 280px;
+	flex: 1;
+	min-width: 290px;
+}
+
+.input--date {
+	min-width: 150px;
 }
 
 .select {
 	min-width: 160px;
 }
 
-.actions-left {
-	max-width: 980px;
-	margin: 12px auto;
+.select--gender {
+	min-width: 92px;
 }
 
-/* テーブル */
-.admin-table {
-	width: 980px;
-	margin: 16px auto 12px;
-	border-collapse: collapse;
+.select--category {
+	min-width: 220px;
 }
 
-.admin-table th,
-.admin-table td {
-	border-bottom: 1px solid #e6e0da;
-	padding: 16px 20px;
-	color: #6c645c;
-}
-
-.admin-table thead th {
-	background: #bca999;
-	color: #fff;
-	text-align: left;
-}
-
-.admin-table .w-ctl {
-	width: 110px;
-}
-
-.admin-table .ctl {
-	text-align: right;
-}
-
-.admin-table .empty {
-	text-align: center;
-	padding: 28px 0;
-	color: #9a9188;
+input::placeholder {
+	font-size: 13px;
 }
 
 /* ボタン */
@@ -95,30 +78,223 @@
 	font-size: 13px;
 }
 
-/* ページネーション */
+.btn.delete {
+	background: rgb(184, 7, 7);
+	color: #fff;
+}
+
+/* エクスポート & ページネーションを同一行に */
+.actions-bar {
+	max-width: 980px;
+	margin: 12px auto 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .pager {
-	width: 980px;
-	margin: 12px auto 28px;
-	text-align: center;
+	width: auto;
+	margin: 0;
 }
 
 .pager nav {
-	display: inline-block;
+	display: inline-flex;
+	gap: 4px;
+	align-items: center;
 }
 
-/* スマホ簡易 */
-@media (max-width: 768px) {
+.pager nav a,
+.pager nav span {
+	display: inline-block;
+	padding: 6px 12px;
+	border: 1px solid #cfc5bb;
+	color: #8e7b6d;
+	background: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	border-radius: 2px;
+}
 
-	.admin-table,
-	.admin-search,
-	.actions-left,
-	.pager {
-		width: auto;
-		margin-left: 16px;
-		margin-right: 16px;
-	}
+.pager nav span[aria-current="page"] {
+	background: #8e7b6d;
+	color: #fff;
+	border-color: #8e7b6d;
+}
 
-	.input {
-		min-width: 180px;
-	}
+/* 巨大化してるSVGにサイズを与える */
+.pager svg {
+	width: 14px;
+	height: 14px;
+	vertical-align: -2px;
+}
+
+/* 「Showing …」等を隠す */
+.pager .hidden {
+	display: none;
+}
+
+/* テーブル */
+.admin-table {
+	width: 980px;
+	table-layout: fixed;
+	margin: 16px auto 20px;
+	border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+	border-bottom: 1px solid #e6e0da;
+	padding: 16px 20px;
+	color: #6c645c;
+}
+
+/* お名前 */
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1) {
+	width: 220px;
+	border-left: 1px solid #e6e0da;
+}
+
+/* 性別 */
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2) {
+	width: 120px;
+}
+
+/* メール */
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+	width: 280px;
+}
+
+/* 種類 */
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4) {
+	width: 240px;
+}
+
+
+/* 詳細ボタン */
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5) {
+	width: 120px;
+	border-right: 1px solid #e6e0da;
+}
+
+.admin-table td {
+	word-break: break-all;
+	/* 長い文字も折り返す */
+}
+
+
+.admin-table thead th {
+	background: #bca999;
+	color: #fff;
+	text-align: left;
+}
+
+.admin-table .w-ctl {
+	width: 110px;
+}
+
+.admin-table .ctl {
+	text-align: right;
+}
+
+.admin-table .empty {
+	text-align: center;
+	padding: 28px 0;
+	color: #9a9188;
+}
+
+/* モーダル */
+.modal {
+	position: fixed;
+	inset: 0;
+	display: none;
+	z-index: 1000;
+}
+
+.modal.is-open {
+	display: block;
+}
+
+.modal-backdrop {
+	position: absolute;
+	inset: 0;
+}
+
+.modal-dialog {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: min(600px, 92vw);
+	max-height: 84vh;
+	background: #fff;
+	border: 1px solid #e6e0da;
+	border-radius: 4px;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+	padding: 70px 50px;
+	color: #6c645c;
+	overflow: auto;
+}
+
+.modal-close {
+	position: absolute;
+	right: 12px;
+	top: 10px;
+	width: 28px;
+	height: 28px;
+	line-height: 26px;
+	text-align: center;
+	border: 1px solid #6c645c;
+	border-radius: 50%;
+	background: #fff;
+	color: #6c645c;
+	cursor: pointer;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.modal-grid {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	gap: 18px 14px;
+	margin: 8px 0 6px;
+}
+
+.modal-grid dt {
+	font-weight: 600;
+	color: #6c645c;
+}
+
+.modal-grid dd {
+	margin: 0;
+}
+
+.prewrap {
+	white-space: pre-wrap;
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 8px;
+}
+
+.btn.danger {
+	display: inline-block;
+	padding: 8px 20px;
+	font-size: 14px;
+	border-radius: 3px;
+	background: #d9534f;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
 }
