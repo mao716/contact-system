@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 @extends('layouts.app')
 
 @section('title')
@@ -8,8 +7,9 @@
 @endsection
 
 @section('content')
+
+<h2>Confirm</h2>
 <div class="container">
-	<h2>Confirm</h2>
 	<table class="table">
 		<tr>
 			<th>お名前</th>

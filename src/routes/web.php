@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AuthController; // ユーザ登録・ログイン用
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -27,9 +26,12 @@ Route::get('/reset', function () {
 	return redirect('/'); // 入力フォームにリダイレクト
 });
 
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index'); // 今の管理画面
 
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('contact.showRegisterForm'); // ユーザー登録ページ
-Route::post('/register', [AuthController::class, 'register'])->name('contact.register'); // ユーザー登録ページ
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('contact.showLoginForm'); // ログインページ
-Route::post('/login', [AuthController::class, 'login'])->name('contact.login'); // ログインページ
-Route::get('/admin', [AdminController::class, 'index'])->name('contact.index'); // 管理画面
+// 仕上げ時
+// Route::middleware('auth')->group(function () {
+// 	Route::get('/admin', [AdminController::class, 'index'])
+// 		->name('admin.index');
+// Route::post('/logout', [AuthController::class, 'logout'])
+// 		->name('logout');
+// });

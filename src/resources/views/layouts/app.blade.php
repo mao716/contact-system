@@ -18,8 +18,11 @@
 <body>
 	<header>
 		<h1>FashionablyLate</h1>
-		<hr>
+		<div class="header-btn">
+			@yield('header-button') {{-- 各ページからボタン等を差し込む --}}
+		</div>
 	</header>
+	<hr>
 	<main>
 		@yield('content')
 	</main>

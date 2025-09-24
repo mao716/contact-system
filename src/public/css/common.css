@@ -1,8 +1,33 @@
 /* レイアウト共通 */
+header {
+	position: relative;
+	background: #fff;
+	padding: 20px;
+}
+
+.header-btn {
+	position: absolute;
+	right: 80px;
+	top: 45px;
+}
+
+.header-btn a,
+.header-btn button {
+	display: inline-block;
+	padding: 6px 14px;
+	font-size: 14px;
+	color: #a09386;
+	border: 1px solid #cfc5bb;
+	border-radius: 4px;
+	background-color: #f5f1ee;
+	text-decoration: none;
+	cursor: pointer;
+}
+
 .container {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 30px 20px;
+	padding: 20px;
 }
 
 h1 {
@@ -10,21 +35,21 @@ h1 {
 	font-family: "Hiragino Mincho ProN", "游明朝", serif;
 	text-align: center;
 	font-weight: 600;
-	margin: 40px 0px;
 }
 
 h2 {
 	color: #6c645c;
 	font-family: "Hiragino Mincho ProN", "游明朝", serif;
 	text-align: center;
-	margin-bottom: 40px;
+	margin: 0;
+	padding: 35px 0 0 0;
 }
 
 /* 区切り線 */
 hr {
 	border: 0;
 	border-top: 1px solid #eee;
-	margin-top: 18px;
+	margin: 0;
 }
 
 /* 必須マーク */

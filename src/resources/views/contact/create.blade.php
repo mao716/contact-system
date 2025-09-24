@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 @extends('layouts.app')
 
 @section('title')
@@ -8,9 +7,9 @@
 @endsection
 
 @section('content')
-<div class="container">
-	<h2>Contact</h2>
 
+<h2>Contact</h2>
+<div class="container">
 	<form action="{{ route('contact.confirm') }}" method="post" novalidate>
 		@csrf
 
