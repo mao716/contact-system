@@ -79,7 +79,7 @@
 
 - PHP 8.1.33
 - Laravel 8.83.29
-- MySQL 8.0.26
+- MySQL 8.0
 - Nginx 1.21.1
 - Docker 28.3.0 / docker compose 2.38.1-desktop.1
 
