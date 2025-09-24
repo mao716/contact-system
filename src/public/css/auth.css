@@ -49,14 +49,6 @@ body {
 	opacity: .7;
 }
 
-/* エラー表示 */
-.error {
-	margin-top: 6px;
-	font-size: 12px;
-	color: #d9534f;
-	/* 赤系 */
-}
-
 /* ボタン */
 .actions {
 	text-align: center;

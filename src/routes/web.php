@@ -26,12 +26,19 @@ Route::get('/reset', function () {
 	return redirect('/'); // 入力フォームにリダイレクト
 });
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.index'); // 今の管理画面
+// Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+// Route::get('/admin/contacts/{contact}', [AdminController::class, 'show'])
+// 	->name('admin.contacts.show');
+// Route::delete('/admin/contacts/{contact}', [AdminController::class, 'destroy'])
+// 	->name('admin.contacts.destroy');
+
 
 // 仕上げ時
-// Route::middleware('auth')->group(function () {
-// 	Route::get('/admin', [AdminController::class, 'index'])
-// 		->name('admin.index');
-// Route::post('/logout', [AuthController::class, 'logout'])
-// 		->name('logout');
-// });
+Route::middleware('auth')->group(function () {
+	Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+	Route::get('/admin/contacts/{contact}', [AdminController::class, 'show'])
+		->name('admin.contacts.show');
+	Route::delete('/admin/contacts/{contact}', [AdminController::class, 'destroy'])
+		->name('admin.contacts.destroy');
+	Route::get('/admin/export', [AdminController::class, 'export'])->name('admin.export');
+});

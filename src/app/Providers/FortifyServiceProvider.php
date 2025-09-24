@@ -13,7 +13,9 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Http\Requests\LoginRequest as FortifyLoginRequest;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Contracts\LogoutResponse as LogoutResponseContract;
 use App\Http\Requests\Auth\LoginRequest as AppLoginRequest;
+use App\Http\Responses\LogoutResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,7 @@ class FortifyServiceProvider extends ServiceProvider
 	public function register(): void
 	{
 		$this->app->bind(FortifyLoginRequest::class, AppLoginRequest::class);
+		$this->app->singleton(LogoutResponseContract::class, LogoutResponse::class);
 	}
 
 	/**

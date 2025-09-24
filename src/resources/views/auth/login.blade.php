@@ -21,7 +21,7 @@
 				<div class="form-row">
 					<label for="email">メールアドレス</label>
 					<input id="email" type="email" name="email" value="{{ old('email') }}"
-						placeholder="例: test@example.com" required autofocus>
+						placeholder="例: test@example.com">
 					@error('email')
 					<p class="error">{{ $message }}</p>
 					@enderror
@@ -30,7 +30,7 @@
 				<div class="form-row">
 					<label for="password">パスワード</label>
 					<input id="password" type="password" name="password"
-						placeholder="例: coachtech1106" required>
+						placeholder="例: coachtech1106">
 					@error('password')
 					<p class="error">{{ $message }}</p>
 					@enderror
