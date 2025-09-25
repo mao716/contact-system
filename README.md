@@ -8,7 +8,7 @@
 
    ```bash
    # ホスト側
-   git clone リンク
+   git clone git@github.com:mao716/contact-system.git
    ```
 
 2. 環境変数ファイルコピー（ホスト側）
