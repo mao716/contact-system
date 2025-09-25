@@ -1,3 +1,4 @@
 src/.env
 docker/mysql/data/
 .env
+.bash_history

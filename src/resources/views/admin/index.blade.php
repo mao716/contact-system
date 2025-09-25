@@ -54,7 +54,7 @@
 				placeholder="お名前やメールアドレスを入力してください">
 
 			<select class="select select--gender" name="gender">
-				<option value="" disable selected>性別</option>
+				<option value="" disable selected hidden>性別</option>
 				<option value="all" {{ request('gender') === 'all' ? 'selected' : '' }}>全て</option>
 				<option value="1" {{ request('gender') === '1' ? 'selected' : '' }}>男性</option>
 				<option value="2" {{ request('gender') === '2' ? 'selected' : '' }}>女性</option>
@@ -62,7 +62,7 @@
 			</select>
 
 			<select class="select select--category" name="category_id">
-				<option value="">お問い合わせの種類</option>
+				<option value="" disable selected hidden>お問い合わせの種類</option>
 				@foreach ($categories as $id => $name)
 				<option value="{{ $id }}" {{ (string)request('category_id') === (string)$id ? 'selected' : '' }}>
 					{{ $name }}
